@@ -8,6 +8,9 @@ Follow these guides in order:
 4. [Prepare the backend development environment](backend.md).
 5. Optionally, [install pgAdmin and connect to PostgreSQL](pgadmin.md).
 
+Team members using Codex or Claude Code can also configure the
+[reusable development agents](development-agents.md).
+
 The backend guide distinguishes current prerequisites from commands that will
 become available when the FastAPI application is scaffolded. Frontend setup
 will be added when frontend development begins.
