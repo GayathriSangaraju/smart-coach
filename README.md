@@ -203,6 +203,8 @@ We will avoid logging raw prompts, dietary or health details, credentials, and o
 4. Request access to the shared GitHub Project board.
 5. Pick an exploration topic or a small task and confirm ownership.
 
+For local infrastructure setup, follow the guides in [`docs/setup/`](docs/setup/README.md).
+
 No board or Discord invitation link is published here yet. Ask the project maintainer in Discord for access.
 
 ### Fork and clone
@@ -231,7 +233,7 @@ Start from a clean working tree. If the fast-forward fails because your local `m
 
 ### Local application setup
 
-There is no runnable application in this repository yet. Runtime versions, dependency installation, database migrations, seed data, and launch commands will be documented once the foundation is implemented.
+There is no runnable frontend or backend application in this repository yet. A Docker Compose configuration is available for the local PostgreSQL database. Runtime versions, application dependencies, database migrations, seed data, and launch commands will be documented as the foundation is implemented.
 
 Each participant will manage their own development environment, private configuration, and any cloud account they choose to use. The planned local setup should support sample data and mocked integrations so contributors can work without making paid model calls for every task.
 
