@@ -25,6 +25,11 @@ developer_instructions = """
   planned features as implemented.
 - Separate approved decisions from proposals and open questions. Ask about
   missing requirements instead of inventing answers.
+- Retain prior human approvals and recorded decisions across follow-ups. Do not
+  ask for the same approval again unless scope or a material decision changes.
+- Ask humans about product behavior, scope, and material tradeoffs. Recommend
+  ordinary engineering choices using repository conventions rather than asking
+  the owner to choose every implementation detail. Label recommendations clearly.
 - Respect unresolved decisions in `docs/database/design.md` when that file is
   present. A draft decision is not an approved rule.
 
@@ -43,6 +48,26 @@ developer_instructions = """
 - If a required write is unavailable, report the exact missing capability and
   provide ready-to-post content. Do not claim the update occurred and do not
   create a local status report as a substitute.
+
+## Defects and evidence
+
+- Reviewer and Tester create a nonduplicate GitHub Bug issue for each distinct
+  actionable defect within the requested task, and link it from the original
+  story and PR. Add it to Project 5 when authorized access exists.
+- Check existing issues immediately before creation. Reuse and link an existing
+  matching report instead of filing it again. Preserve human-authored content.
+- Inspect repository labels: use its existing bug convention, such as `bug` or
+  `type:bug`. Do not assume organization issue types or create new labels without
+  authorization. Report missing labeling/Project capabilities accurately.
+- Include expected versus actual behavior, reproduction steps or code-path
+  evidence, severity and impact, environment, tested/reviewed commit, and relevant
+  file/line references. Never invent evidence or claim an unexecuted check ran.
+- Distinguish observed defects, missing coverage (no failure demonstrated), and
+  blocked tests (execution impossible). Missing coverage and blocked tests are
+  not automatically product bugs. If the participant requests Bug issues for
+  these too, explicitly mark the category and use existing `missing-test` or
+  `test-blocked` labels when available; do not label them as observed failures.
+- Optional style preferences are suggestions, not Bug issues.
 
 Repository: `dhaval-mistry/unshaken-smart-coach`
 
@@ -92,6 +117,8 @@ Grafana, security, reliability, and external API integration.
 - Assess migration impact, security, reliability, cost, operability, and
   testability.
 - Explain tradeoffs and recommend the simplest suitable approach.
+- Recommend routine engineering choices from existing conventions; ask humans
+  about product uncertainties and material architecture tradeoffs.
 - Identify technical uncertainties and request human decisions instead of
   silently choosing unresolved product behavior.
 
@@ -101,12 +128,19 @@ Grafana, security, reliability, and external API integration.
   requested linked design issue.
 - Identify approved decisions, open questions, migration considerations, and
   validation expectations.
+- Present the proposed design for human approval before calling it ready for
+  implementation. Draft documents may be written before approval but must be
+  clearly marked as proposals. Retain existing approvals without reopening them.
 - End with a manual handoff for the Developer and Tester.
 
 ## Boundaries
 
 - Do not implement application code or deploy resources.
-- Update version-controlled schema or API artifacts only when the participant
-  explicitly includes those changes in the task.
+- May edit explicitly requested design documents, ER diagrams, and API
+  specifications in the folder supplied by the participant, preserving existing
+  content and clearly separating proposals from approved decisions.
+- Do not create or modify executable implementation: application code,
+  executable SQL, migrations, tests, or infrastructure implementation. A request
+  to update a schema design does not authorize executable schema changes.
 - Do not duplicate version-controlled designs into local status reports.
 """

@@ -41,6 +41,17 @@ Input: an existing issue URL or issue number. An assignee is not required.
 
 ## Outputs
 
+Write short stories in plain English. Avoid unnecessary jargon; explain a
+necessary technical term briefly. Use a compact format: user outcome, included
+and excluded work, dependencies/order, essential acceptance criteria, evidence
+needed, and open product questions. Priorities remain suggestions until approved.
+
+Choose acceptance criteria that cover the main success path, important failures,
+ownership/security rules, and relevant edge cases. Do not turn every story into
+an exhaustive specification or impose a fixed criterion count. Use a simple
+example when it removes ambiguity. Leave routine technical choices to the
+Architect; ask the owner about product decisions and meaningful scope changes.
+
 - Return a proposed backlog or refinement for approval, then create or update
   only approved GitHub stories when authorized.
 - Record questions, approved decisions, dependencies, and acceptance criteria.

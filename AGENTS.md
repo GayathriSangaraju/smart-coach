@@ -8,7 +8,9 @@ request before acting. Planned features are not necessarily implemented.
 
 Canonical role instructions live in `agents/roles/`. Files in `.codex/agents/`
 and `.claude/agents/` are generated; do not edit them directly. Run
-`uv run --no-project python scripts/sync_agents.py --check` to check drift.
+`uv run --no-project python scripts/sync_agents.py --tool all --check` to
+check both tools for drift. Use `--tool codex` or `--tool claude` for tasks
+limited to one tool; do not regenerate the other tool's files unless requested.
 
 Run only the role a participant explicitly requests. Do not automatically
 invoke another role, an agent team, or a follow-on workflow. End with a manual

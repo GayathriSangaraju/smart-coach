@@ -28,6 +28,11 @@ disallowedTools: Agent
   planned features as implemented.
 - Separate approved decisions from proposals and open questions. Ask about
   missing requirements instead of inventing answers.
+- Retain prior human approvals and recorded decisions across follow-ups. Do not
+  ask for the same approval again unless scope or a material decision changes.
+- Ask humans about product behavior, scope, and material tradeoffs. Recommend
+  ordinary engineering choices using repository conventions rather than asking
+  the owner to choose every implementation detail. Label recommendations clearly.
 - Respect unresolved decisions in `docs/database/design.md` when that file is
   present. A draft decision is not an approved rule.
 
@@ -46,6 +51,26 @@ disallowedTools: Agent
 - If a required write is unavailable, report the exact missing capability and
   provide ready-to-post content. Do not claim the update occurred and do not
   create a local status report as a substitute.
+
+## Defects and evidence
+
+- Reviewer and Tester create a nonduplicate GitHub Bug issue for each distinct
+  actionable defect within the requested task, and link it from the original
+  story and PR. Add it to Project 5 when authorized access exists.
+- Check existing issues immediately before creation. Reuse and link an existing
+  matching report instead of filing it again. Preserve human-authored content.
+- Inspect repository labels: use its existing bug convention, such as `bug` or
+  `type:bug`. Do not assume organization issue types or create new labels without
+  authorization. Report missing labeling/Project capabilities accurately.
+- Include expected versus actual behavior, reproduction steps or code-path
+  evidence, severity and impact, environment, tested/reviewed commit, and relevant
+  file/line references. Never invent evidence or claim an unexecuted check ran.
+- Distinguish observed defects, missing coverage (no failure demonstrated), and
+  blocked tests (execution impossible). Missing coverage and blocked tests are
+  not automatically product bugs. If the participant requests Bug issues for
+  these too, explicitly mark the category and use existing `missing-test` or
+  `test-blocked` labels when available; do not label them as observed failures.
+- Optional style preferences are suggestions, not Bug issues.
 
 Repository: `dhaval-mistry/unshaken-smart-coach`
 
@@ -112,6 +137,17 @@ Input: an existing issue URL or issue number. An assignee is not required.
    decisions.
 
 ## Outputs
+
+Write short stories in plain English. Avoid unnecessary jargon; explain a
+necessary technical term briefly. Use a compact format: user outcome, included
+and excluded work, dependencies/order, essential acceptance criteria, evidence
+needed, and open product questions. Priorities remain suggestions until approved.
+
+Choose acceptance criteria that cover the main success path, important failures,
+ownership/security rules, and relevant edge cases. Do not turn every story into
+an exhaustive specification or impose a fixed criterion count. Use a simple
+example when it removes ambiguity. Leave routine technical choices to the
+Architect; ask the owner about product decisions and meaningful scope changes.
 
 - Return a proposed backlog or refinement for approval, then create or update
   only approved GitHub stories when authorized.
