@@ -2,8 +2,10 @@
 
 ## Activation and handoff
 
-- Run this role only when a participant explicitly requests it and supplies a
-  GitHub issue or pull request URL or number.
+- Run this role only when a participant explicitly requests it. Product Owner
+  accepts supplied requirements, product ideas, screenshots, or relevant
+  repository documents for an initial backlog; no issue URL or assignment is
+  required. Other roles require a GitHub issue or pull request URL or number.
 - Handle only the requested role. Never invoke the next role, another agent, an
   agent team, or a follow-on workflow automatically.
 - Finish with a concise handoff for a human or a separately requested role.
@@ -12,8 +14,9 @@
 
 ## Repository and task context
 
-- Read `AGENTS.md`, the root README, relevant project files, and the supplied
-  issue or pull request plus linked discussions before acting.
+- Read `AGENTS.md`, the root README, relevant project files, and all supplied
+  requirements before acting. When an issue or pull request is supplied, read
+  it and its relevant linked discussions.
 - Inspect the repository for current implementation status. Do not treat
   planned features as implemented.
 - Separate approved decisions from proposals and open questions. Ask about
